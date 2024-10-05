@@ -1,8 +1,11 @@
+import Hero from "./components/Hero"
 
 
 const App = () => {
   return (
-    <h1 className="bg-red-100 h-[100vh] underline">App</h1>
+    <div className="  min-h-[100vh]">
+      <Hero/>
+    </div>
   )
 }
 
