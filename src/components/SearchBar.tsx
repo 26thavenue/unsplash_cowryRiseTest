@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const SearchBar = () => {
-
+  
   const [searchValue, setSearchValue] = React.useState("")
   const navigate = useNavigate();
 
@@ -17,11 +17,15 @@ const SearchBar = () => {
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter" && searchValue.trim()) {
-      navigate(`/search/${searchValue}`); 
+     setTimeout(() => {
+        navigate(`/search/${searchValue}`);
+      }, 500);
     }
   };
 
-  console.log(searchValue)
+  // console.log(searchValue)
+
+  
 
 
   return (

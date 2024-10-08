@@ -9,31 +9,12 @@ const defaultSearchParams: SearchParams = {
   
 };
 
-// export const getSearchResults = async (items: SearchParams = defaultSearchParams) => {
-//   const { pageNumber, query } = items;
-
-//   const result = await Axios.get(`/search/photos`, {
-//     params: {
-//       page: pageNumber,
-//       query: query,
-//     }
-//   });
-
-//   if (!result || result.status === 404 || !result.data) {
-//     console.log(result);
-//     throw new Error('Network response was not ok');
-//   }
-
-//   return result.data;
-// };
-
-
 export const useFetchSearchResults =  ({
     pageNumber,
     query
 }:SearchParams = defaultSearchParams) => {
     const {data:searchResults, isLoading:isSearching} = useQuery({
-        queryKey : ["SearchResult"],
+        queryKey : ["SearchResult", pageNumber,query],
         queryFn: async () => {
              const result = await Axios.get(`/search/photos`, {
                                     params: {
