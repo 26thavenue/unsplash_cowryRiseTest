@@ -3,7 +3,7 @@
 This is a test that contains consuming the unsplash api and displaying a page of "african " photos on load . It also includes a search functionality where you can wuery the unsplash api, a nice picture modal and a masonry staggered grid
 
 ### TOOLS
-The project was designed to be used with Vue and SCSS , but I am more familiar with Tailwind and React. Vite was also used in this project 
+The project was designed to be used with Vue and SCSS , but I am more familiar with Tailwind and React. Vite(a build tool) and React Query for communicating with the Unspalsh API 
 
 ### HOW TO REPLICATE 
 To replicate go to the unsplash api dashboard and create a new project get the required keys as stated in the ".env.example" file and put it in your env file,
