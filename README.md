@@ -1,50 +1,23 @@
-# React + TypeScript + Vite
+## UNSPLASH COWRYRISE TEST
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a test that contains consuming the unsplash api and displaying a page of "african " photos on load . It also includes a search functionality where you can wuery the unsplash api, a nice picture modal and a masonry staggered grid
 
-Currently, two official plugins are available:
+### TOOLS
+The project was designed to be used with Vue and SCSS , but I am more familiar with Tailwind and React. Vite was also used in this project 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### HOW TO REPLICATE 
+To replicate go to the unsplash api dashboard and create a new project get the required keys as stated in the ".env.example" file and put it in your env file,
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+``` bash
+ yarn install
+ yarn run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### LIMITATIONS
+Due to skill issue , I couldn't replicate the masonry grid but it's definitely a work in progress
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### USEFUL LINKS
+[Cowry Rise Assessment](https://cowrywise.notion.site/Frontend-Engineer-Test-3a4aeb677c604ca9b41cdac102d2f974)
+
+[Unsplash Developer API](https://unsplash.com/developers)

@@ -46,6 +46,7 @@ const PictureGrid = ({ isLoading, images }: { isLoading: boolean; images: Pictur
       {isLoading ? (
         <Masonry />
       ) : (
+       
         <div className="mt-[-40px] max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 cursor-pointer">
           {images.map((card, index) => (
             <div
@@ -56,7 +57,7 @@ const PictureGrid = ({ isLoading, images }: { isLoading: boolean; images: Pictur
               <img
                 src={card.imageLink}
                 alt={card.firstName}
-                className="w-full h-full object-cover bg-opacity-50 rounded-md"
+                className="w-[350px] h-[400px] object-cover bg-opacity-50 rounded-md"
               />
               <div className="absolute inset-0 bg-black bg-opacity-20"></div>
               <div className="absolute bottom-0 left-0 w-full text-white p-4">
